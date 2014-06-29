@@ -11,7 +11,7 @@ public class KrunchyKremeHandler implements KrunchyKreme.Iface {
 	final static Logger logger = LoggerFactory.getLogger(Server.class);
 	 
 	public boolean order(int doughtnutId, short quantity) throws TException {
-		logger.debug("Received an order for " + quantity + " X doughnut"
+		logger.debug("Received an order for " + quantity + " X doughnut id "
 				+ doughtnutId);
 		return Menu.isValidOrder(doughtnutId, quantity);
 	}
