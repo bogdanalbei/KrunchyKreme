@@ -1,0 +1,2 @@
+thrift --gen java krunchykreme.thrift
+cp -rf gen-java/* krunchykreme-server/src/main/java/
