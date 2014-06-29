@@ -1,0 +1,2 @@
+thrift --gen php krunchykreme.thrift
+cp -rf gen-php/* krunchykreme-client/

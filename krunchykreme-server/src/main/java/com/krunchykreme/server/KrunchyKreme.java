@@ -45,10 +45,10 @@ public class KrunchyKreme {
      * lists and exception lists are specified using the exact same syntax as
      * field lists in struct or exception definitions.
      * 
-     * @param doughtnutId
+     * @param doughnutId
      * @param quantity
      */
-    public boolean order(int doughtnutId, short quantity) throws org.apache.thrift.TException;
+    public boolean order(int doughnutId, short quantity) throws org.apache.thrift.TException;
 
     public List<Doughnut> getMenu() throws org.apache.thrift.TException;
 
@@ -56,7 +56,7 @@ public class KrunchyKreme {
 
   public interface AsyncIface {
 
-    public void order(int doughtnutId, short quantity, org.apache.thrift.async.AsyncMethodCallback resultHandler) throws org.apache.thrift.TException;
+    public void order(int doughnutId, short quantity, org.apache.thrift.async.AsyncMethodCallback resultHandler) throws org.apache.thrift.TException;
 
     public void getMenu(org.apache.thrift.async.AsyncMethodCallback resultHandler) throws org.apache.thrift.TException;
 
@@ -82,16 +82,16 @@ public class KrunchyKreme {
       super(iprot, oprot);
     }
 
-    public boolean order(int doughtnutId, short quantity) throws org.apache.thrift.TException
+    public boolean order(int doughnutId, short quantity) throws org.apache.thrift.TException
     {
-      send_order(doughtnutId, quantity);
+      send_order(doughnutId, quantity);
       return recv_order();
     }
 
-    public void send_order(int doughtnutId, short quantity) throws org.apache.thrift.TException
+    public void send_order(int doughnutId, short quantity) throws org.apache.thrift.TException
     {
       order_args args = new order_args();
-      args.setDoughtnutId(doughtnutId);
+      args.setDoughnutId(doughnutId);
       args.setQuantity(quantity);
       sendBase("order", args);
     }
@@ -146,26 +146,26 @@ public class KrunchyKreme {
       super(protocolFactory, clientManager, transport);
     }
 
-    public void order(int doughtnutId, short quantity, org.apache.thrift.async.AsyncMethodCallback resultHandler) throws org.apache.thrift.TException {
+    public void order(int doughnutId, short quantity, org.apache.thrift.async.AsyncMethodCallback resultHandler) throws org.apache.thrift.TException {
       checkReady();
-      order_call method_call = new order_call(doughtnutId, quantity, resultHandler, this, ___protocolFactory, ___transport);
+      order_call method_call = new order_call(doughnutId, quantity, resultHandler, this, ___protocolFactory, ___transport);
       this.___currentMethod = method_call;
       ___manager.call(method_call);
     }
 
     public static class order_call extends org.apache.thrift.async.TAsyncMethodCall {
-      private int doughtnutId;
+      private int doughnutId;
       private short quantity;
-      public order_call(int doughtnutId, short quantity, org.apache.thrift.async.AsyncMethodCallback resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
+      public order_call(int doughnutId, short quantity, org.apache.thrift.async.AsyncMethodCallback resultHandler, org.apache.thrift.async.TAsyncClient client, org.apache.thrift.protocol.TProtocolFactory protocolFactory, org.apache.thrift.transport.TNonblockingTransport transport) throws org.apache.thrift.TException {
         super(client, protocolFactory, transport, resultHandler, false);
-        this.doughtnutId = doughtnutId;
+        this.doughnutId = doughnutId;
         this.quantity = quantity;
       }
 
       public void write_args(org.apache.thrift.protocol.TProtocol prot) throws org.apache.thrift.TException {
         prot.writeMessageBegin(new org.apache.thrift.protocol.TMessage("order", org.apache.thrift.protocol.TMessageType.CALL, 0));
         order_args args = new order_args();
-        args.setDoughtnutId(doughtnutId);
+        args.setDoughnutId(doughnutId);
         args.setQuantity(quantity);
         args.write(prot);
         prot.writeMessageEnd();
@@ -243,7 +243,7 @@ public class KrunchyKreme {
 
       public order_result getResult(I iface, order_args args) throws org.apache.thrift.TException {
         order_result result = new order_result();
-        result.success = iface.order(args.doughtnutId, args.quantity);
+        result.success = iface.order(args.doughnutId, args.quantity);
         result.setSuccessIsSet(true);
         return result;
       }
@@ -335,7 +335,7 @@ public class KrunchyKreme {
       }
 
       public void start(I iface, order_args args, org.apache.thrift.async.AsyncMethodCallback<Boolean> resultHandler) throws TException {
-        iface.order(args.doughtnutId, args.quantity,resultHandler);
+        iface.order(args.doughnutId, args.quantity,resultHandler);
       }
     }
 
@@ -395,7 +395,7 @@ public class KrunchyKreme {
   public static class order_args implements org.apache.thrift.TBase<order_args, order_args._Fields>, java.io.Serializable, Cloneable, Comparable<order_args>   {
     private static final org.apache.thrift.protocol.TStruct STRUCT_DESC = new org.apache.thrift.protocol.TStruct("order_args");
 
-    private static final org.apache.thrift.protocol.TField DOUGHTNUT_ID_FIELD_DESC = new org.apache.thrift.protocol.TField("doughtnutId", org.apache.thrift.protocol.TType.I32, (short)1);
+    private static final org.apache.thrift.protocol.TField DOUGHNUT_ID_FIELD_DESC = new org.apache.thrift.protocol.TField("doughnutId", org.apache.thrift.protocol.TType.I32, (short)1);
     private static final org.apache.thrift.protocol.TField QUANTITY_FIELD_DESC = new org.apache.thrift.protocol.TField("quantity", org.apache.thrift.protocol.TType.I16, (short)2);
 
     private static final Map<Class<? extends IScheme>, SchemeFactory> schemes = new HashMap<Class<? extends IScheme>, SchemeFactory>();
@@ -404,12 +404,12 @@ public class KrunchyKreme {
       schemes.put(TupleScheme.class, new order_argsTupleSchemeFactory());
     }
 
-    public int doughtnutId; // required
+    public int doughnutId; // required
     public short quantity; // required
 
     /** The set of fields this struct contains, along with convenience methods for finding and manipulating them. */
     public enum _Fields implements org.apache.thrift.TFieldIdEnum {
-      DOUGHTNUT_ID((short)1, "doughtnutId"),
+      DOUGHNUT_ID((short)1, "doughnutId"),
       QUANTITY((short)2, "quantity");
 
       private static final Map<String, _Fields> byName = new HashMap<String, _Fields>();
@@ -425,8 +425,8 @@ public class KrunchyKreme {
        */
       public static _Fields findByThriftId(int fieldId) {
         switch(fieldId) {
-          case 1: // DOUGHTNUT_ID
-            return DOUGHTNUT_ID;
+          case 1: // DOUGHNUT_ID
+            return DOUGHNUT_ID;
           case 2: // QUANTITY
             return QUANTITY;
           default:
@@ -469,13 +469,13 @@ public class KrunchyKreme {
     }
 
     // isset id assignments
-    private static final int __DOUGHTNUTID_ISSET_ID = 0;
+    private static final int __DOUGHNUTID_ISSET_ID = 0;
     private static final int __QUANTITY_ISSET_ID = 1;
     private byte __isset_bitfield = 0;
     public static final Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> metaDataMap;
     static {
       Map<_Fields, org.apache.thrift.meta_data.FieldMetaData> tmpMap = new EnumMap<_Fields, org.apache.thrift.meta_data.FieldMetaData>(_Fields.class);
-      tmpMap.put(_Fields.DOUGHTNUT_ID, new org.apache.thrift.meta_data.FieldMetaData("doughtnutId", org.apache.thrift.TFieldRequirementType.DEFAULT, 
+      tmpMap.put(_Fields.DOUGHNUT_ID, new org.apache.thrift.meta_data.FieldMetaData("doughnutId", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I32)));
       tmpMap.put(_Fields.QUANTITY, new org.apache.thrift.meta_data.FieldMetaData("quantity", org.apache.thrift.TFieldRequirementType.DEFAULT, 
           new org.apache.thrift.meta_data.FieldValueMetaData(org.apache.thrift.protocol.TType.I16)));
@@ -487,12 +487,12 @@ public class KrunchyKreme {
     }
 
     public order_args(
-      int doughtnutId,
+      int doughnutId,
       short quantity)
     {
       this();
-      this.doughtnutId = doughtnutId;
-      setDoughtnutIdIsSet(true);
+      this.doughnutId = doughnutId;
+      setDoughnutIdIsSet(true);
       this.quantity = quantity;
       setQuantityIsSet(true);
     }
@@ -502,7 +502,7 @@ public class KrunchyKreme {
      */
     public order_args(order_args other) {
       __isset_bitfield = other.__isset_bitfield;
-      this.doughtnutId = other.doughtnutId;
+      this.doughnutId = other.doughnutId;
       this.quantity = other.quantity;
     }
 
@@ -512,33 +512,33 @@ public class KrunchyKreme {
 
     @Override
     public void clear() {
-      setDoughtnutIdIsSet(false);
-      this.doughtnutId = 0;
+      setDoughnutIdIsSet(false);
+      this.doughnutId = 0;
       setQuantityIsSet(false);
       this.quantity = 0;
     }
 
-    public int getDoughtnutId() {
-      return this.doughtnutId;
+    public int getDoughnutId() {
+      return this.doughnutId;
     }
 
-    public order_args setDoughtnutId(int doughtnutId) {
-      this.doughtnutId = doughtnutId;
-      setDoughtnutIdIsSet(true);
+    public order_args setDoughnutId(int doughnutId) {
+      this.doughnutId = doughnutId;
+      setDoughnutIdIsSet(true);
       return this;
     }
 
-    public void unsetDoughtnutId() {
-      __isset_bitfield = EncodingUtils.clearBit(__isset_bitfield, __DOUGHTNUTID_ISSET_ID);
+    public void unsetDoughnutId() {
+      __isset_bitfield = EncodingUtils.clearBit(__isset_bitfield, __DOUGHNUTID_ISSET_ID);
     }
 
-    /** Returns true if field doughtnutId is set (has been assigned a value) and false otherwise */
-    public boolean isSetDoughtnutId() {
-      return EncodingUtils.testBit(__isset_bitfield, __DOUGHTNUTID_ISSET_ID);
+    /** Returns true if field doughnutId is set (has been assigned a value) and false otherwise */
+    public boolean isSetDoughnutId() {
+      return EncodingUtils.testBit(__isset_bitfield, __DOUGHNUTID_ISSET_ID);
     }
 
-    public void setDoughtnutIdIsSet(boolean value) {
-      __isset_bitfield = EncodingUtils.setBit(__isset_bitfield, __DOUGHTNUTID_ISSET_ID, value);
+    public void setDoughnutIdIsSet(boolean value) {
+      __isset_bitfield = EncodingUtils.setBit(__isset_bitfield, __DOUGHNUTID_ISSET_ID, value);
     }
 
     public short getQuantity() {
@@ -566,11 +566,11 @@ public class KrunchyKreme {
 
     public void setFieldValue(_Fields field, Object value) {
       switch (field) {
-      case DOUGHTNUT_ID:
+      case DOUGHNUT_ID:
         if (value == null) {
-          unsetDoughtnutId();
+          unsetDoughnutId();
         } else {
-          setDoughtnutId((Integer)value);
+          setDoughnutId((Integer)value);
         }
         break;
 
@@ -587,8 +587,8 @@ public class KrunchyKreme {
 
     public Object getFieldValue(_Fields field) {
       switch (field) {
-      case DOUGHTNUT_ID:
-        return Integer.valueOf(getDoughtnutId());
+      case DOUGHNUT_ID:
+        return Integer.valueOf(getDoughnutId());
 
       case QUANTITY:
         return Short.valueOf(getQuantity());
@@ -604,8 +604,8 @@ public class KrunchyKreme {
       }
 
       switch (field) {
-      case DOUGHTNUT_ID:
-        return isSetDoughtnutId();
+      case DOUGHNUT_ID:
+        return isSetDoughnutId();
       case QUANTITY:
         return isSetQuantity();
       }
@@ -625,12 +625,12 @@ public class KrunchyKreme {
       if (that == null)
         return false;
 
-      boolean this_present_doughtnutId = true;
-      boolean that_present_doughtnutId = true;
-      if (this_present_doughtnutId || that_present_doughtnutId) {
-        if (!(this_present_doughtnutId && that_present_doughtnutId))
+      boolean this_present_doughnutId = true;
+      boolean that_present_doughnutId = true;
+      if (this_present_doughnutId || that_present_doughnutId) {
+        if (!(this_present_doughnutId && that_present_doughnutId))
           return false;
-        if (this.doughtnutId != that.doughtnutId)
+        if (this.doughnutId != that.doughnutId)
           return false;
       }
 
@@ -659,12 +659,12 @@ public class KrunchyKreme {
 
       int lastComparison = 0;
 
-      lastComparison = Boolean.valueOf(isSetDoughtnutId()).compareTo(other.isSetDoughtnutId());
+      lastComparison = Boolean.valueOf(isSetDoughnutId()).compareTo(other.isSetDoughnutId());
       if (lastComparison != 0) {
         return lastComparison;
       }
-      if (isSetDoughtnutId()) {
-        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.doughtnutId, other.doughtnutId);
+      if (isSetDoughnutId()) {
+        lastComparison = org.apache.thrift.TBaseHelper.compareTo(this.doughnutId, other.doughnutId);
         if (lastComparison != 0) {
           return lastComparison;
         }
@@ -699,8 +699,8 @@ public class KrunchyKreme {
       StringBuilder sb = new StringBuilder("order_args(");
       boolean first = true;
 
-      sb.append("doughtnutId:");
-      sb.append(this.doughtnutId);
+      sb.append("doughnutId:");
+      sb.append(this.doughnutId);
       first = false;
       if (!first) sb.append(", ");
       sb.append("quantity:");
@@ -751,10 +751,10 @@ public class KrunchyKreme {
             break;
           }
           switch (schemeField.id) {
-            case 1: // DOUGHTNUT_ID
+            case 1: // DOUGHNUT_ID
               if (schemeField.type == org.apache.thrift.protocol.TType.I32) {
-                struct.doughtnutId = iprot.readI32();
-                struct.setDoughtnutIdIsSet(true);
+                struct.doughnutId = iprot.readI32();
+                struct.setDoughnutIdIsSet(true);
               } else { 
                 org.apache.thrift.protocol.TProtocolUtil.skip(iprot, schemeField.type);
               }
@@ -782,8 +782,8 @@ public class KrunchyKreme {
         struct.validate();
 
         oprot.writeStructBegin(STRUCT_DESC);
-        oprot.writeFieldBegin(DOUGHTNUT_ID_FIELD_DESC);
-        oprot.writeI32(struct.doughtnutId);
+        oprot.writeFieldBegin(DOUGHNUT_ID_FIELD_DESC);
+        oprot.writeI32(struct.doughnutId);
         oprot.writeFieldEnd();
         oprot.writeFieldBegin(QUANTITY_FIELD_DESC);
         oprot.writeI16(struct.quantity);
@@ -806,15 +806,15 @@ public class KrunchyKreme {
       public void write(org.apache.thrift.protocol.TProtocol prot, order_args struct) throws org.apache.thrift.TException {
         TTupleProtocol oprot = (TTupleProtocol) prot;
         BitSet optionals = new BitSet();
-        if (struct.isSetDoughtnutId()) {
+        if (struct.isSetDoughnutId()) {
           optionals.set(0);
         }
         if (struct.isSetQuantity()) {
           optionals.set(1);
         }
         oprot.writeBitSet(optionals, 2);
-        if (struct.isSetDoughtnutId()) {
-          oprot.writeI32(struct.doughtnutId);
+        if (struct.isSetDoughnutId()) {
+          oprot.writeI32(struct.doughnutId);
         }
         if (struct.isSetQuantity()) {
           oprot.writeI16(struct.quantity);
@@ -826,8 +826,8 @@ public class KrunchyKreme {
         TTupleProtocol iprot = (TTupleProtocol) prot;
         BitSet incoming = iprot.readBitSet(2);
         if (incoming.get(0)) {
-          struct.doughtnutId = iprot.readI32();
-          struct.setDoughtnutIdIsSet(true);
+          struct.doughnutId = iprot.readI32();
+          struct.setDoughnutIdIsSet(true);
         }
         if (incoming.get(1)) {
           struct.quantity = iprot.readI16();

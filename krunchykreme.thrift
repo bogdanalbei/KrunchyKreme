@@ -57,7 +57,7 @@ service KrunchyKreme {
    * field lists in struct or exception definitions.
    */
 
-   bool order(1: i32 doughtnutId, 2: i16 quantity),
+   bool order(1: i32 doughnutId, 2: i16 quantity),
 
    list<Doughnut> getMenu()
 }
